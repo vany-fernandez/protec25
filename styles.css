@@ -1,0 +1,129 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfdd7;
+    color: #000;
+}
+
+header {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: añade sombra al nav */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fdfcfc;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    background-color: #0b6759;
+}
+
+nav a:hover {
+    background-color: #0ea79c;
+}
+
+h2 {
+    color: #07443b;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+section div {
+    max-width: 50%;
+}
+
+#planes {
+    background-color: #0b6759;
+}
+
+#ley {
+    background-color: #00d1bb;
+}
+
+
+#construccion {
+    background-color: #0b6759;
+}
+
+#mediciones {
+    background-color: #00d1bb;
+}
+
+#ambiente {
+    background-color: #0b6759;
+}
+
+#servicios {
+    background-color: #00d1bb;
+    align-content: center;
+    display:list-item;
+}
+
+#servicios div {
+    max-width: 100%;
+    margin: 50px;
+}
+
+
+#blanco {
+    color: #fdfcfc;
+}
+
+footer {
+    background-color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: #fdfcfc;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+h1 {
+    font-size: 70px; /* Aumentar el tamaño del título de la página */
+
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+}
