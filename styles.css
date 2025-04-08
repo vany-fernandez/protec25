@@ -35,6 +35,11 @@ nav a {
     margin: 0 10px;
     border-radius: 5px;
     background-color: #0b6759;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Esto ayuda si hay varias líneas */
+    /* height: 100%; Asegura que el botón se adapte bien */
 }
 
 nav a:hover {
@@ -42,57 +47,127 @@ nav a:hover {
 }
 
 h2 {
-    color: #07443b;
+    color: #01110f;
     font-family: 'Courier New', Courier, monospace;
+    font-weight:bolder;
+    margin: 50px 0 10px 0;
 }
 
 section {
+    position: relative;
     padding: 50px;
     text-align: center;
     margin: 10px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden; /* para que el before no se desborde */
 }
+
 
 section div {
     max-width: 50%;
 }
 
-#planes {
-    background-color: #0b6759;
+#inicio {
+    /* background-color: #0b6759; */
+    background: url('img/seghiginicio.avif') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: #ffffff;
 }
 
-#ley {
+#estudios {
     background-color: #00d1bb;
+    color: #0a0a0a;
 }
 
+#autoproteccion {
+    background-color: #0b6759;
+    background: url('img/evac.jpeg') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: #ffffff;
+}
 
 #construccion {
-    background-color: #0b6759;
-}
-
-#mediciones {
     background-color: #00d1bb;
 }
 
 #ambiente {
     background-color: #0b6759;
+    background: url('imagen_medio_ambiente.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: #ffffff;
 }
 
-#servicios {
-    background-color: #00d1bb;
+#normas {
+    background-color: #fdfdd7;
     align-content: center;
+    display:list-item;
+    font-weight: 100;
+}
+
+.normas-iso {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f5f9fb;
+  }
+  
+  .normas-iso h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #004d66;
+  }
+  
+  .normas-iso .intro {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    color: #333;
+  }
+  
+  .iso-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .iso-card {
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .iso-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .iso-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #0b6759;
+  }
+  
+  .iso-card p {
+    font-size: 0.95em;
+    color: #555;
+  }
+  
+
+#profesionales {
+    background-color: #0b6759;
     display:list-item;
 }
 
-#servicios div {
+#profesionales div {
     max-width: 100%;
     margin: 50px;
-}
-
-
-#blanco {
-    color: #fdfcfc;
 }
 
 footer {
@@ -126,4 +201,51 @@ img {
 p {
     font-size: 20px;
     line-height: 1.6;
+    font-weight:bolder;
+}
+
+ul {
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: left;
+        font-weight:bold;
+}
+
+/*Atenuación de las imagenes de fondo*/
+.oscuro::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.719); /* Atenuación */
+    z-index: 0;
+    pointer-events: none; /* permite hacer clic en el contenido */
+}
+
+/* Fondo superpuesto con atenuación suave */
+.atenuado::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.575); /* luz tenue */
+    z-index: 0;
+    pointer-events: none;
+  }
+
+section > * {
+    position: relative;
+    z-index: 1;
+}
+/*FIn atenuación de las imagenes de fondo*/
+
+/*Imagenes slide*/
+.slideshow-bg {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
 }

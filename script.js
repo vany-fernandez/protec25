@@ -12,3 +12,15 @@ function handleScroll() {
 }
 
 window.addEventListener('scroll', handleScroll);
+
+
+//SLIDE 
+document.querySelectorAll('.slideshow-bg').forEach(section => {
+    const images = section.dataset.images.split(',');
+    let current = 0;
+
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      section.style.backgroundImage = `url(${images[current]})`;
+    }, 5000);
+  });
