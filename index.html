@@ -9,19 +9,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&amp;display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header id="top">
-    <img src="logo_empresa.png" alt="Protec" width="300">
-    <nav>
-      <a href="#top">Inicio</a>
-      <a href="#estudios">Realización de estudios</a>
-      <a href="#autoproteccion">Sistema de Autoprotección</a>
+   <header id="top" class="mobile-header">
+    <div class="logo-container">
+      <a href="#inicio">
+        <img src="logo_empresa.png" alt="Protec" class="logo" width="300">
+      </a>
+    </div>
+    <button id="menu-toggle" class="hamburger" aria-label="Menú">☰</button>
+    <nav id="main-nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#estudios">Estudios</a>
+      <a href="#autoproteccion">Autoprotección</a>
       <a href="#construccion">Construcción</a>
-      <a href="#ambiente">Medio Ambiente</a>
+      <a href="#ambiente">Ambiente</a>
       <a href="#normas">Normas ISO</a>
-      <a href="#profesionales">Atención a Profesionales</a>
+      <a href="#profesionales">Profesionales</a>
     </nav>
   </header>
 
@@ -35,6 +42,9 @@
 
   <section id="estudios" class="slideshow-bg atenuado" data-images="imagen_telurimetro.jpg, img/CDF.jpg, img/ruido.jpeg">
     
+    <div>
+      <h1>Realización de estudios</h1>
+    </div>
     <div><p>Adaptándonos a las necesidades de cada organización y a la normativa legal vigente, se realizan los relevamientos necesarios, y mediciones con equipos en caso de corresponder, y se confeccionan los siguientes estudios:</p>
     <ul>
       <li>Estudios de carga de fuego, según Decreto 351/79</li>
@@ -44,9 +54,6 @@
       <li>Estudios de puesta a tierra, según Resolución SRT 900/2015</li>
       <li>Estudios de ergonomía, según Resolución SRT 886/2015</li>
     </ul>
-  </div>
-  <div>
-    <h1>Realización de estudios</h1>
   </div>
 </section>
 
@@ -59,22 +66,23 @@
     <p>Realización de simulacros de evacuación (prácticas obligatorias – Ley 5920).</p>  
   </div></section>
 
-  <section id="construccion" class="atenuado slideshow-bg" data-images="imagen_construccion.jpg, img/constr1.png, img/constr2.jpg">
-     
-     <div>
-    <p>Ofrecemos un servicio integral en el área de construcción, dando cumplimiento a los requerimientos legales establecidos por Dec. 911/96, Res. SRT 231/96, Res. 61/23, Res. SRT 51/97, Res. SRT 35/98, Res. SRT 319/99.</p>
-    <ul>
-      <li>Confección y presentación en ART de programas de Seguridad y Avisos de Obra, según Resolución 51/97, 35/98 y 319/99.</li>
-      <li>Visitas de obra</li>
-      <li>Confección de análisis de tarea segura</li>
-      <li>Confección de permisos para trabajos especiales</li>
-      <li>Permanencia de técnico en obra de ser requerido</li>
-    </ul>
-  </div>
-  <div><h1>Construcción</h1>
-  
+  <section id="construccion" class="construccion-bloque">
+    <div class="construccion-img">
+      <img src="imagen_construccion.jpg" alt="Obra en construcción">
+    </div>
+    <div class="construccion-texto">
+      <h1>Construcción</h1>
+      <p><strong>Ofrecemos un servicio integral en el área de construcción, dando cumplimiento a los requerimientos legales establecidos por Dec. 911/96, Res. SRT 231/96, Res. 61/23, Res. SRT 51/97, Res. SRT 35/98, Res. SRT 319/99.</strong></p>
+      <ul>
+        <li>Confección y presentación en ART de programas de Seguridad y Avisos de Obra</li>
+        <li>Visitas de obra</li>
+        <li>Confección de análisis de tarea segura</li>
+        <li>Confección de permisos para trabajos especiales</li>
+        <li>Permanencia de técnico en obra de ser requerido</li>
+      </ul>
     </div>
   </section>
+  
 
   <section id="ambiente" class="oscuro">
     <div><h1>Medio Ambiente</h1>
@@ -97,17 +105,17 @@
   
     <div class="iso-cards">
       <div class="iso-card">
-        <img src="iconos/quality.png" alt="ISO 9001" />
+        <img src="img/quality.png" alt="ISO 9001" />
         <h3>ISO 9001:2015</h3>
         <p>Sistemas de gestión de calidad. Mejora continua, satisfacción del cliente y optimización de procesos.</p>
       </div>
       <div class="iso-card">
-        <img src="iconos/safety.png" alt="ISO 45001" />
+        <img src="img/safety.png" alt="ISO 45001" />
         <h3>ISO 45001:2018</h3>
         <p>Gestión de la seguridad y salud en el trabajo. Prevención de riesgos laborales y bienestar organizacional.</p>
       </div>
       <div class="iso-card">
-        <img src="iconos/audit.png" alt="ISO 19011" />
+        <img src="img/audit.png" alt="ISO 19011" />
         <h3>ISO 19011:2018</h3>
         <p>Directrices para la auditoría de sistemas de gestión. Evaluación interna eficaz y alineación con objetivos.</p>
       </div>
@@ -121,14 +129,14 @@
 
       <h2>Confección de Simuladores de Humo y de Personas para Sistema de Autoprotección Ley 5920</h2>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/96GzIbzDuto?si=R9uavu_6TdN8aCk9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ww3n8qFxgi0?si=lEX8VTeT3KYoGrx5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/96GzIbzDuto?si=R9uavu_6TdN8aCk9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/Ww3n8qFxgi0?si=lEX8VTeT3KYoGrx5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     
         <h2>Confección de planos de evacuación</h2>
-        <img src="imagen_planos.jpg" alt="Planos de Evacuación" width="100%">
+        <img src="imagen_planos.jpg" alt="Planos de Evacuación" width="50%">
        
       <h2>Confección de plano digital en AutoCad, partiendo de un plano escaneado</h2>
-      <img src="planocad.jpg" alt="Planos en Cad">
+      <img src="planocad.jpg" alt="Planos en Cad" width="50%">
      
   
   </section>
