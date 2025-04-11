@@ -31,7 +31,10 @@ document.querySelectorAll('.slideshow-bg').forEach(section => {
   }, 5000);
 });
 
-
+window.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('header');
+  document.body.style.paddingTop = ${header.offsetHeight}px;
+});
 // ======= MENÚ HAMBURGUESA =======
 document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('menu-toggle');
@@ -64,8 +67,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-window.addEventListener('DOMContentLoaded', () => {
-  const header = document.querySelector('header');
-  document.body.style.paddingTop = ${header.offsetHeight}px;
-});
+
   
