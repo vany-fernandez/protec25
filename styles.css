@@ -5,6 +5,7 @@ body {
     background-color: #fcfce3;
     color: #4a4a4a;
     /* font-weight: bold; */
+    padding-top: 100px;
 
 }
 
@@ -55,6 +56,11 @@ nav a:hover {
     background-color: #0ea79c;
 }
 
+nav a:focus {
+  outline: 2px solid #fff;
+  background-color: #0ea79c;
+}
+
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -103,6 +109,7 @@ section div {
     background-color: #00d1bb;
     color: #1b1b1b;
     flex-direction: row-reverse;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.348);
 }
 
 #estudios h1 {
@@ -131,6 +138,8 @@ section div {
     min-height: 400px;  /* opcional: garantiza que se vea equilibrado */
     align-items: stretch;
   overflow: hidden;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.348);
+  
   }
 
   .construccion-img {
@@ -174,6 +183,7 @@ section div {
     background: url('imagen_medio_ambiente.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 #ambiente p {
@@ -226,7 +236,7 @@ section div {
   }
 
   .iso-card {
-    background-color: rgba(194, 248, 205, 0.85);
+    background-color:   rgba(194, 248, 205, 0.85);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 25px;
@@ -273,6 +283,10 @@ section div {
     color: #1b1b1b;
 }
 
+#profesionales h1 {
+  color: #004d66; 
+}
+
 footer {
     background-color: #000000;
     padding: 20px 0;
@@ -292,7 +306,8 @@ footer {
 
 
 h1 {
-    font-size: 70px; /* Aumentar el tamaño del título de la página */
+    font-size: 50px; /* Aumentar el tamaño del título de la página */
+
 
 
 }
@@ -355,6 +370,8 @@ section > * {
     transition: background-image 1s ease-in-out;
 }
 
+
+
 @media (max-width: 768px) {
 
 
@@ -408,23 +425,22 @@ section > * {
 
   nav {
     position: absolute;
-    top: 60px; /* Debajo del header */
+    top: 60px;
     left: 0;
-    display: none;
+    display: flex;
     flex-direction: column;
     width: 100%;
     background-color: #000;
-    padding: 0;
-    width: 100%;
+    transform: scaleY(0);        /* Estado oculto */
+    transform-origin: top;
+    transition: transform 0.4s ease;
     z-index: 999;
-    max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
   }
 
   nav.active {
     display: flex;
     max-height: 500px;
+    transform: scaleY(1); 
   }
 
   nav a {
