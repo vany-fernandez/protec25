@@ -374,16 +374,12 @@ section > * {
 
 @media (max-width: 768px) {
 
-
   body {
-    padding-top: 100px; /* Despejamos el espacio para el header fijo en móviles */
+    padding-top: 100px;
   }
 
-
   header {
-    /* flex-direction: column;
-    align-items: flex-start; */
-    position: fixed; /* Hace que el header se quede fijo */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -408,11 +404,8 @@ section > * {
     height: auto;
   }
 
-
-
   .hamburger {
     display: block;
-    align-self: flex-end;
     font-size: 2rem;
     background: none;
     border: none;
@@ -422,25 +415,28 @@ section > * {
     z-index: 2001;
   }
 
-
   nav {
     position: absolute;
     top: 60px;
     left: 0;
-    display: flex;
     flex-direction: column;
     width: 100%;
     background-color: #000;
-    transform: scaleY(0);        /* Estado oculto */
+    transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.4s ease;
     z-index: 999;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
   }
 
   nav.active {
-    display: flex;
+    transform: scaleY(1);
     max-height: 500px;
-    transform: scaleY(1); 
+    opacity: 1;
+    pointer-events: auto;
   }
 
   nav a {
@@ -449,6 +445,7 @@ section > * {
     font-size: 1rem;
   }
 
+}
   /* SECCIONES GENERALES */
   section {
     flex-direction: column;
