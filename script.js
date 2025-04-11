@@ -63,4 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+window.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('header');
+  document.body.style.paddingTop = ${header.offsetHeight}px;
+});
   
