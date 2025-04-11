@@ -376,7 +376,7 @@ section > * {
 
 
   body {
-    padding-top: 80px; /* Despejamos el espacio para el header fijo en móviles */
+    padding-top: 100px; /* Despejamos el espacio para el header fijo en móviles */
   }
 
 
